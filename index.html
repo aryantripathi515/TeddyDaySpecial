@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Teddy_Day</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: "Pacifico", "cursive";
+            font-weight: 300;
+            font-style: normal;
+            ;
+            height: 100%;
+            width: 100%;
+            background-color: #e4ced1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px -5px 84px rgb(197, 59, 82);
+            height: 80vh;
+            width: 80vw;
+        }
+
+        .container h1 {
+            font-size: 2rem;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .btn-container {
+            position: relative;
+            margin: 10px;
+        }
+
+        #btn-no{
+            position: relative;
+            margin: 10px;
+            padding: 10px 22px;
+            background-color: rgb(255, 0, 0);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn-yes {
+            position: relative;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: green;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .img-container img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .img-container2 img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This teddy is cute, But not cuter than you😊. Will you be mine?</h1>
+        <div class="btn-container">
+            <button id="btn-yes" onclick="">Yes</button>
+            <button id="btn-no" onclick="">No</button>
+        </div>
+        <div class="img-container"><img src="taddy.gif" alt="Teddy_Day_Img"></div>
+    </div>
+    <script>
+        let scaleNum = 2;
+        let btnSelector2 = document.querySelector('#btn-yes');
+        let btnSelector = document.querySelector('#btn-no');
+        btnSelector.addEventListener('click',()=>{
+            scaleNum += 3;
+            btnSelector2.style.transform = `scale(${scaleNum})`;
+            });
+
+
+        btnSelector2.addEventListener('click',()=>{
+            let abc = document.querySelector('.container');
+            abc.innerHTML= ` <h1>I know it! That's way I'm smiling so much😁</h1>
+            <div class="img-container2"><img  src="happymood.gif" alt="Teddy_Day_Img"></div>
+            `;
+            document.body.style.backgroundColor = "white";
+            document.body.style.boxShadow = "rgb(125 29 45)";
+
+        });
+    </script>
+</body>
+
+</html>
